@@ -1,4 +1,4 @@
-//! # number-theory
+//! # numtheory
 //!
 //! Number theory in Rust: primes, modular arithmetic,
 //! Diophantine equations, continued fractions, and more.

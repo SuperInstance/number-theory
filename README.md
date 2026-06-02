@@ -1,4 +1,4 @@
-# number-theory
+# numtheory
 
 Number theory in Rust. Primes, residues, and the music of integers.
 
@@ -24,7 +24,7 @@ No external number theory dependencies — everything is implemented from scratc
 
 ```toml
 [dependencies]
-number-theory = "0.1"
+numtheory = "0.1"
 ```
 
 Or clone and build:
@@ -44,7 +44,7 @@ cargo build
 ### Prime generation and factorization
 
 ```rust
-use number_theory::*;
+use numtheory::*;
 
 let primes = sieve_primes(100);
 println!("primes up to 100: {:?}", primes);
@@ -62,7 +62,7 @@ assert!(!is_prime(999999999999999990));
 ### Chinese Remainder Theorem
 
 ```rust
-use number_theory::*;
+use numtheory::*;
 
 // x ≡ 2 (mod 3), x ≡ 3 (mod 5), x ≡ 2 (mod 7) → x = 23
 let x = crt(&[2, 3, 2], &[3, 5, 7]);
@@ -72,7 +72,7 @@ assert_eq!(x, Some(23));
 ### Arithmetic functions
 
 ```rust
-use number_theory::*;
+use numtheory::*;
 
 println!("φ(30) = {}", euler_totient(30));  // 8
 println!("μ(30) = {}", mobius(30));         // -1
@@ -84,7 +84,7 @@ println!("M(100) = {}", mertens(100));       // 1
 ### Continued fractions and Pell's equation
 
 ```rust
-use number_theory::*;
+use numtheory::*;
 
 let cf = ContinuedFraction::from_sqrt(2);
 println!("√2 = [{}; {:?}]", cf.a0, cf.periodic); // [1; [2]]
@@ -98,7 +98,7 @@ assert_eq!(sol.y, 180);
 ### Quadratic residues
 
 ```rust
-use number_theory::*;
+use numtheory::*;
 
 println!("(2/7) = {}", legendre(2, 7));   // 1 (QR)
 println!("(3/7) = {}", legendre(3, 7));   // -1 (non-residue)
